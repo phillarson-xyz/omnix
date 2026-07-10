@@ -3,7 +3,7 @@
 
 # omnix
 
-<img width="10%" src="./doc/src/favicon.svg">
+<img width="10%" src="./doc/favicon.svg">
 
 *Pronounced [`/ɒmˈnɪks/`](https://ipa-reader.com/?text=%C9%92m%CB%88n%C9%AAks&voice=Geraint)*
 
@@ -53,3 +53,11 @@ nix run
 - Changes must accompany a corresponding `history.md` entry.[^cc]
 
 [^cc]: We don't use any automatic changelog generator for this repo.
+
+### Release HOWTO
+
+Begin with a release PR:
+
+- Pick a version
+- Update `history.md` to make sure new release header is present
+- Run [`cargo workspace publish --force omnix-cli`](https://github.com/pksunkara/cargo-workspaces?tab=readme-ov-file#publish) in devShell, using the picked version.

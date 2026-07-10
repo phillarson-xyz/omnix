@@ -1,4 +1,4 @@
-# Develop
+# `om develop`
 
 The `om develop` command should be used indirectly in direnv, via the `use omnix` directive in your `.envrc`.
 
@@ -7,17 +7,20 @@ The `om develop` command should be used indirectly in direnv, via the `use omnix
 1. Put this in your `.envrc` file:
 
     ```sh
-    source_url https://raw.githubusercontent.com/juspay/omnix/75ed48923835963e2f18baba08f54a8adc307ba2/omnixrc "sha256-8C2Jb5bHx/0cvm1+9gOlBEdWzbikCWT5UsJWewUAFt4="
+    source_url \
+      https://omnix.page/om/develop/omnixrc/v1 \
+      'sha256-FBAVRYkaexKeFKQGUxaPHqhBnqA7km7++O77dKiyD0I='
     watch_file om.yaml
     use omnix
     ```
 
-2. You should also create an empty (or fleshed out) [`om.yaml`](../config.md) file in your project to avoid Nix evaluation:
+2. You should also create a [`om.yaml`](../config.md) file in your project to avoid Nix evaluation:
 
     ```sh
-    touch om.yaml
+    touch om.yaml # Can be empty
     ```
 
+3. Optionally, add a welcome text (see below) to that `om.yaml`. See [this commit](https://github.com/srid/haskell-template/commit/128105dbeac47c515065ba377f4b1f976ec4f696) for a full example.
 
 ## What does it do? {#what}
 
@@ -49,3 +52,9 @@ develop:
 
       🍎🍎 Run 'just' to see more commands. See <https://nixos.asia/en/vscode> for IDE setup.
 ```
+
+## Revision History for `omnixrc` {#omnixrc-history}
+
+### v1
+
+- Initial release using pinned nixpkgs for omnix `1.3.0`.

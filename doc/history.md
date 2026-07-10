@@ -1,9 +1,27 @@
+---
+order: 100
+---
+
 # Release history
 
-## 1.0.4 (UNRELEASED)
+## 1.3.2 (2026-01-06) {#1.3.2}
+
+### Bumps
+
+- `syntect`: `5.3.2` -> `5.3.3`
+
+## 1.3.1 (2025-12-18) {#1.3.1}
+
+### Fixes
+
+- `om health`: Support `major.minor.patch+patch_count` (ex: `2.31.2+1`) versioning scheme of nix from nixpkgs.
+
+## 1.3.0 (2025-07-15) {#1.3.0}
 
 - `om ci`: Allow impure builds through `impure = true;` setting in `om.yaml` (#445)
-- `om health`: Fix DetSys installer hijacking its own version into `nix --version` causing false Nix version detection. (#458)
+- `om health`
+  - Fix DetSys installer hijacking its own version into `nix --version` causing false Nix version detection. (#458)
+  - Add homebrew check (disabled by default) (#459)
 
 ## 1.0.3 (2025-03-17) {#1.0.3}
 
